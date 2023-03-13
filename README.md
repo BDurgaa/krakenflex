@@ -5,9 +5,15 @@ Steps to run in local :
 
 Download this project as ZIP or clone it using GitHub desktop.
 If it is downloaded as ZIP, extract it.
-Since this application is developed and compiled on Java 11, So Java 11 has to be installed on the machine.
+Since this application is developed and compiled on Java 11, So Java 11 and Maven both have to be installed on the machine.
 Once the application is downloaded in local make sure it's cleaned and compiled with "mvn clean install" to download all the required dependencies
-Once it's cleaned and installed run http://localhost:8080/actuator/health in browser to check the health of the application
+Go to cmd prompt and point the current directory to the folder where this project is downloaded and run the below command to bring up the server
+
+java -jar target/KrakenFlexTest-0.0.1-SNAPSHOT.jar src/main/java/com/kf/demo/KrakenFlexTestApplication.java
+
+If everything goes well, you will see "Started KrakenFlexTestApplication ...." message on the console then hit the below url
+
+http://localhost:8080/actuator/health in browser to check the health of the application
 
 Below urls give the actual output based on the request type
 
